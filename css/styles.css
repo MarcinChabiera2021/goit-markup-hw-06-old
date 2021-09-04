@@ -110,15 +110,6 @@ img {
   border-bottom: 1px solid #ececec;
 }
 
-/* navi list */
-/* .nav {
-position: relative;
-width: 254px;
-height: 48px;
-left: 453px;
-top: 32px;
-} */
-
 .navi-list {
   display: flex;
   font-weight: 500;
@@ -145,7 +136,9 @@ top: 32px;
   border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.navi-list-link {
+  color: var(--font-main-color);
+}
 .active {
   color: var(--main-color);
 }
@@ -173,6 +166,7 @@ top: 32px;
   line-height: 1.143;
   letter-spacing: 0.02em;
   color: var(--font-secondary-color);
+  fill: var(--font-secondary-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -382,6 +376,22 @@ top: 32px;
   background: var(--background-color-main);
   padding: 60px 0;
 }
+.footer .container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.footer-left-side {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+.footer .h3 {
+  color: var(--font-dark-theme);
+}
+.footer .logo-link {
+  margin-right: 70px;
+}
 .address-item {
   margin-bottom: 9px;
 }
@@ -407,16 +417,10 @@ top: 32px;
   color: var(--main-color);
 }
 /* Footer social links */
-.footer .container {
-  display: flex;
-  align-items: baseline;
+.footer-social-links {
+  margin-left: 70px;
 }
-.footer-left-side {
-  margin-right: 70px;
-}
-.footer .h3 {
-  color: var(--font-dark-theme);
-}
+
 .footer .social-list-icon {
   fill: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
@@ -426,6 +430,48 @@ top: 32px;
 .footer .social-list-icon:focus {
   background-color: var(--main-color);
 }
+
+/* NEWSLATER FOOTER */
+.newslater-form {
+  display: flex;
+}
+.newslater-title {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.newslater-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newslater-input {
+  display: flex;
+  align-items: center;
+  width: 358px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: var(--background-color-main);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.sign-up-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  margin-left: 12px;
+  outline: none;
+  fill: #ffffff;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+}
+
 /* ----PORTFOLIO---- */
 
 .button-filter-list {
@@ -549,7 +595,6 @@ top: 32px;
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-
 
 .modal-btn-close {
   position: absolute;
